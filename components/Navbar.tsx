@@ -23,7 +23,7 @@ export default function Navbar({locale}: NavbarProps) {
   return (
     <>
       <header className="border-b border-white/30 bg-black text-white z-100 top-0 sticky">
-        <div className="mx-auto flex h-18 max-w-7xl items-center px-4 md:mx-0 justify-between md:px-12">
+        <div className="mx-auto flex h-18 max-w-7xl w-full items-center px-4 justify-between md:px-12">
           <div className="flex items-center gap-6">
             <button
               type="button"
@@ -100,7 +100,7 @@ export default function Navbar({locale}: NavbarProps) {
         <nav className="flex flex-col px-8 py-8">
           {NAV_ITEMS.map((item, index) => (
             <Link
-              key={item.label}
+              key={`${item.label}-${index}`}
               href={item.href}
               onClick={() => setMobileOpen(false)}
               className={[

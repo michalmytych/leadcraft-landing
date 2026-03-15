@@ -1,10 +1,9 @@
-import Logo from '@/components/Logo';
 import HeroSection from '@/sections/HeroSection';
 import OfferSection from '@/sections/OfferSection';
-import {useTranslations} from 'next-intl';
+// import {useTranslations} from 'next-intl';
 
 export default function HomePage() {
-  const t = useTranslations('Home');
+  // const t = useTranslations('Home');
 
   return (
     <main>

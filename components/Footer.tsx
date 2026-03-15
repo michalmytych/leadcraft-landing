@@ -51,9 +51,9 @@ export default function Footer() {
 
               <div className="grid gap-12 md:grid-cols-2 sm:grid-cols-2 xs:mt-12 sm:mt-12 md:mt-12 lg:mt-8 lg:bg-transparent">
                 <nav className="flex flex-col gap-7">
-                  {mainLinks.map((item) => (
-                    <div className="flex items-center gap-2">
-                      <div key={item.label} className="w-2 h-2 rounded-full mb-0.5 bg-[#4F5CF9]"></div>
+                  {mainLinks.map((item, index) => (
+                    <div className="flex items-center gap-2" key={`${item.label}-${index}`}>
+                      <div className="w-2 h-2 rounded-full mb-0.5 bg-[#4F5CF9]"></div>
                       <Link             
                         href={item.href}
                         className="font-heading text-lg leading-none text-white/80 transition hover:text-white hover:underline"
@@ -65,9 +65,9 @@ export default function Footer() {
                 </nav>
 
                 <nav className="flex flex-col gap-7">
-                  {serviceLinks.map((item) => (
-                    <div className="flex items-center gap-2">
-                      <div key={item.label} className="w-2 h-2 rounded-full mb-0.5 bg-[#4F5CF9]"></div>
+                  {serviceLinks.map((item, index) => (
+                    <div className="flex items-center gap-2" key={`${item.label}-${index}`}>
+                      <div className="w-2 h-2 rounded-full mb-0.5 bg-[#4F5CF9]"></div>
                       <Link
                         href={item.href}
                         className="font-heading text-lg leading-none text-white/80 transition hover:text-white hover:underline"
