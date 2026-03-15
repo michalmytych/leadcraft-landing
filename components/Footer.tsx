@@ -6,6 +6,7 @@ import {
   XIcon,
   GithubIcon,
 } from "@/components/icons/SocialIcons";
+import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
 
 const mainLinks = [
   { label: "O nas", href: "#about" },
@@ -49,12 +50,12 @@ export default function Footer() {
                 </p>
               </div>
 
-              <div className="grid gap-12 md:grid-cols-2 sm:grid-cols-2 xs:mt-12 sm:mt-12 md:mt-12 lg:mt-8 lg:bg-transparent">
+              <div className="grid gap-12 grid-cols-2 md:grid-cols-2 sm:grid-cols-2 xs:mt-12 sm:mt-12 md:mt-12 lg:mt-8 lg:bg-transparent">
                 <nav className="flex flex-col gap-7">
                   {mainLinks.map((item, index) => (
                     <div className="flex items-center gap-2" key={`${item.label}-${index}`}>
                       <div className="w-2 h-2 rounded-full mb-0.5 bg-[#4F5CF9]"></div>
-                      <Link             
+                      <Link
                         href={item.href}
                         className="font-heading text-lg leading-none text-white/80 transition hover:text-white hover:underline"
                       >
@@ -91,16 +92,22 @@ export default function Footer() {
               <div className="h-0.5 w-full bg-linear-to-r from-white/0 to-white/70 mt-3"></div>
               <div className="mt-10 flex flex-col gap-2">
                 <a
-                  href="mailto:kapitan.autyzm@gmail.com"
-                  className="font-heading text-white/80 transition hover:text-white"
+                  href="mailto:ignacy.gawron@leadcraft-agency.com"
+                  className="font-heading text-[18px] text-white/80 transition hover:text-white hover:underline flex items-center gap-5"
                 >
-                  kapitan.autyzm@gmail.com
+                  <EnvelopeIcon className="w-8 h-8" />
+                  <span>
+                    ignacy.gawron@leadcraft-agency.com
+                  </span>
                 </a>
                 <a
-                  href="tel:+48666997911"
-                  className="font-heading text-[20px] font-medium text-white transition hover:text-white/80"
+                  href="tel:+48660127049"
+                  className="font-heading text-[32px] transition hover:text-white/80 hover:underline flex items-center gap-4"
                 >
-                  +48 666 997 911
+                  <PhoneIcon className="w-8 h-8" />
+                  <span>
+                    +48 660 127 049
+                  </span>
                 </a>
               </div>
 

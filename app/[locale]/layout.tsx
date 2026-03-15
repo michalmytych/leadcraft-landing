@@ -32,7 +32,6 @@ export default async function LocaleLayout({
     <LocaleShell locale={locale} messages={messages}>
       <Navbar locale={locale} />
       {children}
-      <Footer />
     </LocaleShell>
   );
 }

@@ -39,7 +39,7 @@ export default function HeroSection() {
 
           <div className="mt-8 h-px w-full max-w-[520px] bg-black/20" />
 
-          <p className="mt-8 max-w-[640px] font-content text-xl leading-[1.28] text-black/70 md:text-[18px]">
+          <p className="mt-8 max-w-[640px] font-content text-lg leading-[1.28] text-black/70 md:text-[18px]">
             Wspieramy firmy usługowe, techniczne i produkcyjne w pozyskiwaniu
             klientów dzięki skutecznym kampaniom i przemyślanym procesom.
             Działamy elastycznie – każda strategia jest skrojona pod Twój
