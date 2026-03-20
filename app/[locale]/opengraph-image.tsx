@@ -1,3 +1,4 @@
+import Logo from '@/components/Logo';
 import { ImageResponse } from 'next/og';
 
 export const size = {
@@ -39,8 +40,8 @@ export default async function Image({
           padding: '64px',
         }}
       >
-        <div style={{ display: 'flex', fontSize: 28, color: '#A1A1AA' }}>
-          LeadCraft
+        <div>
+          <Logo className='h-8'/>
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>

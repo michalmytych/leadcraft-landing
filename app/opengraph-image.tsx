@@ -1,3 +1,4 @@
+import Logo from '@/components/Logo';
 import { ImageResponse } from 'next/og';
 
 export const alt = 'LeadCraft B2B Marketing Agency';
@@ -22,14 +23,8 @@ export default function Image() {
                     padding: '64px',
                 }}
             >
-                <div
-                    style={{
-                        display: 'flex',
-                        fontSize: 28,
-                        color: '#A1A1AA',
-                    }}
-                >
-                    LeadCraft
+                <div>
+                    <Logo className='h-8' />
                 </div>
 
                 <div
