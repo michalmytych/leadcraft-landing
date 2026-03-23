@@ -38,13 +38,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "/",
     siteName: "LeadCraft",
-    title: "LeadCraft B2B Marketing Agency",
+    title: "LeadCraft B2B Marketing",
     description:
-      "LeadCraft is a B2B marketing agency focused on generating high-quality leads for SaaS and technology companies.",
-    locale: "en_US",
+      "LeadCraft to agencja marketingowa nastawiona na generację realnych lead-ów sprzedażowych.",
+    locale: "pl_PL",
     images: [
       {
-        url: "/og-image.png",
+        url: "/images/og/og-image.png",
         width: 1200,
         height: 630,
         alt: "LeadCraft B2B Marketing Agency",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     title: "LeadCraft B2B Marketing Agency",
     description:
       "LeadCraft is a B2B marketing agency focused on generating high-quality leads for SaaS and technology companies.",
-    images: ["/og-image.png"],
+    images: ["/images/og/og-image.png"],
   },
 
   icons: {
