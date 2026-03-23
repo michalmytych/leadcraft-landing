@@ -54,7 +54,7 @@ export default function HeroSection() {
         </div>
         <div>
           <Image
-            loading="eager"
+            preload={true}
             className="lg:absolute z-20 sm:relative transform scale-x-[-1] -right-32 bottom-24 lg:right-32 lg:bottom-14 xl:right-32 xl:bottom-14"
             src={'/images/hero/businessman.png'}
             alt="Businessman" width={420} height={615}
