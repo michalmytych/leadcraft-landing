@@ -70,7 +70,7 @@ export default function Navbar({locale}: NavbarProps) {
 
           <div className="flex items-center gap-5">
             <div className="hidden sm:block">
-              <CTAButton href="#contact">Bezpłatna wycena</CTAButton>
+              <CTAButton href="https://calendly.com/ignacy-gawron">Bezpłatna wycena</CTAButton>
             </div>
 
             <LocaleDropdown currentLocale={locale} />
@@ -129,7 +129,7 @@ export default function Navbar({locale}: NavbarProps) {
             ].join(" ")}
             style={{transitionDelay: mobileOpen ? "240ms" : "0ms"}}
           >
-            <CTAButton href="#contact" className="w-full justify-between">
+            <CTAButton href="https://calendly.com/ignacy-gawron" className="w-full justify-between">
               Bezpłatna wycena
             </CTAButton>
           </div>

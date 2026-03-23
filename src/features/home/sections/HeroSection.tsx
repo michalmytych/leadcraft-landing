@@ -47,7 +47,7 @@ export default function HeroSection() {
           </p>
 
           <div className="mt-10">
-            <CTAButton href="#contact" variant="primary">
+            <CTAButton href="https://calendly.com/ignacy-gawron" variant="primary">
               Umów konsultację
             </CTAButton>
           </div>

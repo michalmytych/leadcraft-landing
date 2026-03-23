@@ -1,14 +1,5 @@
-import HeroSection from '@/sections/HeroSection';
-import OfferSection from '@/sections/OfferSection';
-// import {useTranslations} from 'next-intl';
+import HomePage from '@/src/features/home/HomePage';
 
-export default function HomePage() {
-  // const t = useTranslations('Home');
-
-  return (
-    <main>
-      <HeroSection />
-      <OfferSection />
-    </main>
-  );
+export default function Page() {
+  return <HomePage />;
 }
