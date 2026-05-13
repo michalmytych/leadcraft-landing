@@ -1,10 +1,10 @@
 import {NextIntlClientProvider} from 'next-intl';
-import Navbar from '@/components/Navbar';
+import type {AbstractIntlMessages} from 'next-intl';
 import Footer from '@/components/Footer';
 
 type Props = {
   locale: string;
-  messages: any;
+  messages: AbstractIntlMessages;
   children: React.ReactNode;
 };
 

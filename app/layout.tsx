@@ -78,8 +78,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className={`${nohemi.variable} ${switzer.variable}`} lang="en">
-      <body>{children}</body>
+    <html
+      className={`${nohemi.variable} ${switzer.variable}`}
+      lang="pl"
+      suppressHydrationWarning
+    >
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }
