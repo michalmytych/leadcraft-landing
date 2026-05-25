@@ -99,6 +99,19 @@
           "imageAlt": "Zespoły handlowe"
         }
       }
+    },
+    "videoProcess": {
+      "headingLines": [
+        "Zacznij",
+        "pozyskiwać",
+        "klientów"
+      ],
+      "bodyPrefix": "Zbudujmy proces,",
+      "bodyHighlight": "który dowozi leady",
+      "bodySuffixLines": [
+        "w przewidywalny",
+        "i skalowalny sposób."
+      ]
     }
   },
   "LeadGeneration": {

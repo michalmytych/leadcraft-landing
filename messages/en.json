@@ -99,6 +99,19 @@
           "imageAlt": "Sales teams"
         }
       }
+    },
+    "videoProcess": {
+      "headingLines": [
+        "Start",
+        "acquiring",
+        "clients"
+      ],
+      "bodyPrefix": "Let's build a process",
+      "bodyHighlight": "that delivers leads",
+      "bodySuffixLines": [
+        "in a predictable",
+        "and scalable way."
+      ]
     }
   },
   "LeadGeneration": {
