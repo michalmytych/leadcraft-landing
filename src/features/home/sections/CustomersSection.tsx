@@ -1,81 +1,76 @@
 import ImagePillCard, { ImagePillCardProps } from "@/components/ImagePillCard";
+import {useTranslations} from "next-intl";
 
-const CUSTOMERS: ImagePillCardProps[] = [
+const CUSTOMERS: Array<Omit<ImagePillCardProps, "title" | "imageAlt"> & {id: string}> = [
     {
-        title: "Firmy usługowe B2B",
+        id: "b2bServices",
         imageSrc: "/images/customers/b2b.png",
-        imageAlt: "",
         className: "md:col-span-1"
     },
     {
-        title: "Firmy techniczne i inżynieryjne",
+        id: "technical",
         imageSrc: "/images/customers/construction.png",
-        imageAlt: "",
         className: "md:col-span-2"
     },
     {
-        title: "Sektor przemysłowy i produkcyjny",
+        id: "industrial",
         imageSrc: "/images/customers/production.png",
-        imageAlt: "",
         className: "md:col-span-2"
     },
     {
-        title: "Firmy doradcze i eksperckie",
+        id: "consulting",
         imageSrc: "/images/customers/experts.png",
-        imageAlt: "",
         className: "md:col-span-1"
     },
     {
-        title: "Branżę IT",
+        id: "it",
         imageSrc: "/images/customers/it.png",
-        imageAlt: "",
         className: "md:col-span-1"
     },
     {
-        title: "Firmy logistyczne i instalacyjne",
+        id: "logistics",
         imageSrc: "/images/customers/industry.png",
-        imageAlt: "",
         className: "md:col-span-2"
     },
     {
-        title: "Importerów i eksporterów",
+        id: "trade",
         imageSrc: "/images/customers/import.png",
-        imageAlt: "",
         className: "md:col-span-2"
     },
     {
-        title: "Zespoły handlowe",
+        id: "salesTeams",
         imageSrc: "/images/customers/sales.png",
-        imageAlt: "",
         className: "md:col-span-1"
     }
 ];
 
 export default function CustomersSection() {
+    const t = useTranslations("Home.customers");
+
     return (
-        <section className="overflow-hidden bg-white text-black">
+        <section id="clients" className="overflow-hidden bg-white text-black">
             <div className="relative mx-auto max-w-7xl px-6 py-20">
 
                 {/* header */}
                 <div>
                     <p className="text-xs tracking-widest uppercase text-black/60">
-                        Klienci
+                        {t("eyebrow")}
                     </p>
 
                     <h2 className="mt-3 text-3xl md:text-4xl font-heading text-black">
-                        Kogo wspieramy?
+                        {t("heading")}
                     </h2>
 
                     <div className="mt-4 h-px mb-6 w-64 bg-black/20" />
 
                     <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4">
                         {
-                            CUSTOMERS.map((customer: ImagePillCardProps, ix: number) => (
+                            CUSTOMERS.map((customer, ix: number) => (
                                 <ImagePillCard
                                     key={`customers_pill_${ix}`}
-                                    title={customer.title}
+                                    title={t(`items.${customer.id}.title`)}
                                     imageSrc={customer.imageSrc}
-                                    imageAlt={customer.imageAlt}
+                                    imageAlt={t(`items.${customer.id}.imageAlt`)}
                                     heightClassName="h-[90px] md:h-[100px]"
                                     className={customer.className}
                                 />

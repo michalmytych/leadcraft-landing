@@ -1,6 +1,132 @@
 {
+  "Navigation": {
+    "items": {
+      "about": "O nas",
+      "offer": "Oferta",
+      "clients": "Klienci",
+      "blog": "Blog"
+    },
+    "cta": "Bezpłatna wycena",
+    "openMenu": "Otwórz menu",
+    "closeMenu": "Zamknij menu"
+  },
   "Home": {
     "title": "Leadcraft",
-    "subtitle": "Agencja marketingowa"
+    "subtitle": "Agencja marketingowa",
+    "hero": {
+      "eyebrow": "MARKETING B2B",
+      "tags": [
+        "Lead Generation",
+        "Eventy",
+        "Strony internetowe",
+        "SEO"
+      ],
+      "heading": {
+        "line1": "Tworzymy marketing,",
+        "line2Prefix": "który",
+        "highlight": "sprzedaje"
+      },
+      "description": "Wspieramy firmy usługowe, techniczne i produkcyjne w pozyskiwaniu klientów dzięki skutecznym kampaniom i przemyślanym procesom. Działamy elastycznie - każda strategia jest skrojona pod Twój biznes.",
+      "cta": "Umów konsultację"
+    },
+    "offer": {
+      "eyebrow": "Oferta",
+      "heading": "Jak możemy pomóc Twojej firmie",
+      "description": "Wspieramy firmy usługowe i technologiczne w pozyskiwaniu klientów dzięki skutecznym kampaniom marketingowym oraz przemyślanemu procesowi sprzedaży.",
+      "consultationCta": "Umów konsultację",
+      "detailsCta": "Dowiedz się więcej",
+      "items": {
+        "leadGeneration": {
+          "title": "Lead Generation",
+          "subtitle": "Pozyskuj wartościowe leady i przekładaj je na realne szanse sprzedażowe.",
+          "description": "Projektujemy kampanie B2B nastawione na efekt: od strategii i komunikacji, przez landing pages i formularze, po kwalifikację kontaktów.",
+          "imageAlt": "Ilustracja lead generation"
+        },
+        "events": {
+          "title": "Eventy",
+          "subtitle": "Organizujemy wydarzenia i targi, które budują relacje i wspierają sprzedaż.",
+          "description": "Pomagamy w przygotowaniu obecności marki na targach, konferencjach i wydarzeniach branżowych.",
+          "imageAlt": "Ilustracja wydarzeń"
+        },
+        "websites": {
+          "title": "Strony internetowe",
+          "subtitle": "Tworzymy strony firmowe, które zwiększają konwersję i porządkują ofertę.",
+          "description": "Budujemy strony B2B i landing pages zoptymalizowane pod marketing i sprzedaż.",
+          "imageAlt": "Ilustracja stron internetowych"
+        },
+        "seo": {
+          "title": "SEO",
+          "subtitle": "Zwiększamy widoczność w wyszukiwarkach i pomagamy docierać do klientów.",
+          "description": "Pracujemy nad technicznym SEO, treściami i strukturą strony, aby zwiększyć ruch i liczbę zapytań.",
+          "imageAlt": "Ilustracja SEO"
+        }
+      }
+    },
+    "customers": {
+      "eyebrow": "Klienci",
+      "heading": "Kogo wspieramy?",
+      "items": {
+        "b2bServices": {
+          "title": "Firmy usługowe B2B",
+          "imageAlt": "Firmy usługowe B2B"
+        },
+        "technical": {
+          "title": "Firmy techniczne i inżynieryjne",
+          "imageAlt": "Firmy techniczne i inżynieryjne"
+        },
+        "industrial": {
+          "title": "Sektor przemysłowy i produkcyjny",
+          "imageAlt": "Sektor przemysłowy i produkcyjny"
+        },
+        "consulting": {
+          "title": "Firmy doradcze i eksperckie",
+          "imageAlt": "Firmy doradcze i eksperckie"
+        },
+        "it": {
+          "title": "Branżę IT",
+          "imageAlt": "Branża IT"
+        },
+        "logistics": {
+          "title": "Firmy logistyczne i instalacyjne",
+          "imageAlt": "Firmy logistyczne i instalacyjne"
+        },
+        "trade": {
+          "title": "Importerów i eksporterów",
+          "imageAlt": "Importerzy i eksporterzy"
+        },
+        "salesTeams": {
+          "title": "Zespoły handlowe",
+          "imageAlt": "Zespoły handlowe"
+        }
+      }
+    }
+  },
+  "LeadGeneration": {
+    "eyebrow": "Generowanie lead-ów sprzedażowych",
+    "heading": "Lead generation",
+    "introHeading": "Co to dla nas znaczy?",
+    "steps": {
+      "prospecting": "Prospecting i ICP"
+    }
+  },
+  "Footer": {
+    "copyright": "Copyright © 2025 All Rights Reserved",
+    "legal": "Wszelkie prawa do treści strony są zastrzeżone, jakiekolwiek wykorzystanie treści w całości lub części jest zabronione.",
+    "mainLinks": {
+      "about": "O nas",
+      "offer": "Oferta",
+      "clients": "Klienci",
+      "blog": "Blog"
+    },
+    "serviceLinks": {
+      "events": "Eventy",
+      "leadGeneration": "Lead generation",
+      "websites": "Strony internetowe",
+      "seo": "SEO"
+    },
+    "contactHeading": "Nawiążmy kontakt",
+    "createdBy": "Created by Michał Mytych",
+    "creatorLinkedinLabel": "LinkedIn Michała",
+    "creatorGithubLabel": "GitHub Michała"
   }
 }

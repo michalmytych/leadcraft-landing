@@ -9,6 +9,8 @@ type OfferCardProps = {
   imageAlt: string;
   consultationHref: string;
   detailsHref: string;
+  consultationLabel: string;
+  detailsLabel: string;
 };
 
 export default function OfferCard({
@@ -19,6 +21,8 @@ export default function OfferCard({
   imageAlt,
   consultationHref,
   detailsHref,
+  consultationLabel,
+  detailsLabel,
 }: OfferCardProps) {
   return (
     <article className="group relative overflow-hidden rounded-2xl border border-white/10 bg-linear-to-br from-white/10 via-[#4F5CF9]/10 to-black/80 p-6 shadow-xl">
@@ -48,11 +52,11 @@ export default function OfferCard({
 
           <div className="mt-5 flex flex-nowrap gap-3">
             <CTAButton href={consultationHref} variant="primary">
-              Umów konsultację
+              {consultationLabel}
             </CTAButton>
 
             <CTAButton href={detailsHref}>
-              Dowiedz się więcej
+              {detailsLabel}
             </CTAButton>
           </div>
         </div>

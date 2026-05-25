@@ -1,14 +1,11 @@
 import CTAButton from "@/components/CTAButton";
 import Tag from "@/components/Tag";
-
-const TAGS = [
-  "Lead Generation",
-  "Eventy",
-  "Strony internetowe",
-  "SEO",
-];
+import {useTranslations} from "next-intl";
 
 export default function HeroSection() {
+  const t = useTranslations("Home.hero");
+  const tags = t.raw("tags") as string[];
+
   return (
     <section className="relative overflow-hidden bg-white text-black">
       <div className="pointer-events-none absolute inset-0">
@@ -18,36 +15,33 @@ export default function HeroSection() {
       <div className="relative mx-auto grid min-h-[calc(100vh-100px)] max-w-7xl items-center gap-14 px-6 py-8 lg:py-0 md:px-10 lg:grid-cols-[minmax(0,720px)_1fr]">
         <div className="max-w-[760px] z-30">
           <p className="font-content text-sm uppercase tracking-[0.08em] text-black/50 md:text-base">
-            MARKETING B2B
+            {t("eyebrow")}
           </p>
 
           <div className="mt-5 flex flex-wrap gap-3">
-            {TAGS.map((tag) => (
+            {tags.map((tag) => (
               <Tag content={tag} key={tag} />
             ))}
           </div>
 
           <h1 className="mt-8 max-w-[920px] font-heading text-[48px] leading-[1.1] tracking-[-0.04em] text-black sm:text-[62px] md:text-[61px] lg:text-[70px]">
-            Tworzymy marketing,
+            {t("heading.line1")}
             <br />
-            który{" "}
+            {t("heading.line2Prefix")}{" "}
             <span className="text-[#4F5CF9]">
-              sprzedaje
+              {t("heading.highlight")}
             </span>
           </h1>
 
           <div className="mt-8 h-px w-full max-w-[520px] bg-black/20" />
 
           <p className="mt-8 max-w-[640px] font-content text-lg leading-[1.28] text-black/70 md:text-[18px]">
-            Wspieramy firmy usługowe, techniczne i produkcyjne w pozyskiwaniu
-            klientów dzięki skutecznym kampaniom i przemyślanym procesom.
-            Działamy elastycznie – każda strategia jest skrojona pod Twój
-            biznes.
+            {t("description")}
           </p>
 
           <div className="mt-10">
             <CTAButton href="https://calendly.com/ignacy-gawron" variant="primary">
-              Umów konsultację
+              {t("cta")}
             </CTAButton>
           </div>
         </div>

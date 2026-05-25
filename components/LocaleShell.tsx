@@ -10,7 +10,7 @@ type Props = {
 
 export default function LocaleShell({locale, messages, children}: Props) {
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>     
+    <NextIntlClientProvider key={locale} locale={locale} messages={messages}>     
       {children}
       <Footer />
     </NextIntlClientProvider>

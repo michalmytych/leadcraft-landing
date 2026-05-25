@@ -5,20 +5,22 @@ import Link from "next/link";
 import Logo from "@/components/Logo";
 import CTAButton from "@/components/CTAButton";
 import LocaleDropdown from "@/components/LocaleDropdown";
+import {useTranslations} from "next-intl";
 
 type NavbarProps = {
   locale: string;
 };
 
 const NAV_ITEMS = [
-  {href: "#about", label: "O nas"},
-  {href: "#offer", label: "Oferta"},
-  {href: "#clients", label: "Klienci"},
-  {href: "#blog", label: "Blog"},
+  {href: "#about", key: "about"},
+  {href: "#offer", key: "offer"},
+  {href: "#clients", key: "clients"},
+  {href: "#blog", key: "blog"},
 ];
 
 export default function Navbar({locale}: NavbarProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const t = useTranslations("Navigation");
 
   return (
     <>
@@ -29,7 +31,7 @@ export default function Navbar({locale}: NavbarProps) {
               type="button"
               onClick={() => setMobileOpen((prev) => !prev)}
               className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
-              aria-label={mobileOpen ? "Zamknij menu" : "Otwórz menu"}
+              aria-label={mobileOpen ? t("closeMenu") : t("openMenu")}
             >
               <span
                 className={[
@@ -59,18 +61,18 @@ export default function Navbar({locale}: NavbarProps) {
           <nav className="hidden items-center gap-16 lg:flex">
             {NAV_ITEMS.map((item) => (
               <Link
-                key={item.label}
+                key={item.key}
                 href={item.href}
                 className="font-content text-[22px] text-white transition hover:opacity-75"
               >
-                {item.label}
+                {t(`items.${item.key}`)}
               </Link>
             ))}
           </nav>
 
           <div className="flex items-center gap-5">
             <div className="hidden sm:block">
-              <CTAButton href="https://calendly.com/ignacy-gawron">Bezpłatna wycena</CTAButton>
+              <CTAButton href="https://calendly.com/ignacy-gawron">{t("cta")}</CTAButton>
             </div>
 
             <LocaleDropdown currentLocale={locale} />
@@ -100,7 +102,7 @@ export default function Navbar({locale}: NavbarProps) {
         <nav className="flex flex-col px-8 py-8">
           {NAV_ITEMS.map((item, index) => (
             <Link
-              key={`${item.label}-${index}`}
+              key={`${item.key}-${index}`}
               href={item.href}
               onClick={() => setMobileOpen(false)}
               className={[
@@ -116,7 +118,7 @@ export default function Navbar({locale}: NavbarProps) {
                 paddingBottom: "14px",
               }}
             >
-              {item.label}
+              {t(`items.${item.key}`)}
             </Link>
           ))}
 
@@ -130,7 +132,7 @@ export default function Navbar({locale}: NavbarProps) {
             style={{transitionDelay: mobileOpen ? "240ms" : "0ms"}}
           >
             <CTAButton href="https://calendly.com/ignacy-gawron" className="w-full justify-between">
-              Bezpłatna wycena
+              {t("cta")}
             </CTAButton>
           </div>
         </nav>

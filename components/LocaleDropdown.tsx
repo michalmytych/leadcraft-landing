@@ -2,6 +2,7 @@
 
 import {useState, useRef, useEffect} from "react";
 import Link from "next/link";
+import {usePathname} from "next/navigation";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
 type LocaleDropdownProps = {
@@ -18,6 +19,9 @@ export default function LocaleDropdown({
 }: LocaleDropdownProps) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
+  const pathname = usePathname();
+
+  const pathnameWithoutLocale = pathname.replace(/^\/(pl|en)(?=\/|$)/, "") || "/";
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -60,7 +64,7 @@ export default function LocaleDropdown({
         {LOCALES.map((locale) => (
           <Link
             key={locale.code}
-            href={`/${locale.code}`}
+            href={`/${locale.code}${pathnameWithoutLocale === "/" ? "" : pathnameWithoutLocale}`}
             className={[
               "block rounded-xl px-3 py-2 text-sm text-white transition hover:bg-white/10",
               currentLocale === locale.code ? "bg-white/10" : "",

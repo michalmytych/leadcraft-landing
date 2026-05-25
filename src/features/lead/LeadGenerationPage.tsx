@@ -1,6 +1,9 @@
 import ListHeader from "@/components/ListHeader";
+import {useTranslations} from "next-intl";
 
 export default function LeadGenerationPage() {
+  const t = useTranslations("LeadGeneration");
+
   return (
     <main>
       <section className="overflow-hidden bg-white text-black">
@@ -8,21 +11,21 @@ export default function LeadGenerationPage() {
 
           <div>
             <p className="text-xs tracking-widest uppercase text-black/60">
-              Generowanie lead-ów sprzedażowych
+              {t("eyebrow")}
             </p>
 
             <h2 className="mt-3 text-3xl md:text-5xl font-heading text-black">
-              Lead generation
+              {t("heading")}
             </h2>
 
-            <h3 className="mt-3 font-content text-2xl text-black/60">Co to dla nas znaczy?</h3>
+            <h3 className="mt-3 font-content text-2xl text-black/60">{t("introHeading")}</h3>
 
             <div className="mt-4 h-px mb-6 w-64 bg-black/20" />
           </div>
 
           <ul>
             <li key={'prospecting'}>
-              <ListHeader elementNumber={1} title="Prospecting i ICP" />
+              <ListHeader elementNumber={1} title={t("steps.prospecting")} />
 
             </li>
           </ul>

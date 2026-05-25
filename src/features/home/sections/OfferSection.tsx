@@ -1,53 +1,36 @@
 import OfferCard from "@/components/OfferCard";
+import {useTranslations} from "next-intl";
 
-const offers = [
+const OFFER_META = [
   {
-    title: "Lead Generation",
-    subtitle:
-      "Pozyskuj wartościowe leady i przekładaj je na realne szanse sprzedażowe.",
-    description:
-      "Projektujemy kampanie B2B nastawione na efekt: od strategii i komunikacji, przez landing pages i formularze, po kwalifikację kontaktów.",
+    id: "leadGeneration",
     imageSrc: "/images/offer/lead-generation.webp",
-    imageAlt: "Lead generation illustration",
     consultationHref: "#contact",
     detailsHref: "#lead-generation",
   },
   {
-    title: "Eventy",
-    subtitle:
-      "Organizujemy wydarzenia i targi, które budują relacje i wspierają sprzedaż.",
-    description:
-      "Pomagamy w przygotowaniu obecności marki na targach, konferencjach i wydarzeniach branżowych.",
+    id: "events",
     imageSrc: "/images/offer/events.webp",
-    imageAlt: "Events illustration",
     consultationHref: "#contact",
     detailsHref: "#events",
   },
   {
-    title: "Strony internetowe",
-    subtitle:
-      "Tworzymy strony firmowe, które zwiększają konwersję i porządkują ofertę.",
-    description:
-      "Budujemy strony B2B i landing pages zoptymalizowane pod marketing i sprzedaż.",
+    id: "websites",
     imageSrc: "/images/offer/webpages.webp",
-    imageAlt: "Websites illustration",
     consultationHref: "#contact",
     detailsHref: "#websites",
   },
   {
-    title: "SEO",
-    subtitle:
-      "Zwiększamy widoczność w wyszukiwarkach i pomagamy docierać do klientów.",
-    description:
-      "Pracujemy nad technicznym SEO, treściami i strukturą strony, aby zwiększyć ruch i liczbę zapytań.",
+    id: "seo",
     imageSrc: "/images/offer/seo.webp",
-    imageAlt: "SEO illustration",
     consultationHref: "#contact",
     detailsHref: "#seo",
   },
 ];
 
 export default function OfferSection() {
+  const t = useTranslations("Home.offer");
+
   return (
     <section id="offer" className="relative bg-black text-white overflow-hidden">
       
@@ -62,33 +45,34 @@ export default function OfferSection() {
         {/* header */}
         <div className="max-w-3xl">
           <p className="text-xs tracking-widest uppercase text-white/60">
-            Oferta
+            {t("eyebrow")}
           </p>
 
           <h2 className="mt-3 text-3xl md:text-4xl font-heading text-white">
-            Jak możemy pomóc Twojej firmie
+            {t("heading")}
           </h2>
 
           <div className="mt-4 h-px w-64 bg-white/20" />
 
           <p className="mt-4 text-base text-white/70 leading-relaxed">
-            Wspieramy firmy usługowe i technologiczne w pozyskiwaniu klientów
-            dzięki skutecznym kampaniom marketingowym oraz przemyślanemu procesowi sprzedaży.
+            {t("description")}
           </p>
         </div>
 
         {/* grid */}
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
-          {offers.map((offer) => (
+          {OFFER_META.map((offer) => (
             <OfferCard
-              key={offer.title}
-              title={offer.title}
-              subtitle={offer.subtitle}
-              description={offer.description}
+              key={offer.id}
+              title={t(`items.${offer.id}.title`)}
+              subtitle={t(`items.${offer.id}.subtitle`)}
+              description={t(`items.${offer.id}.description`)}
               imageSrc={offer.imageSrc}
-              imageAlt={offer.imageAlt}
+              imageAlt={t(`items.${offer.id}.imageAlt`)}
               consultationHref={offer.consultationHref}
               detailsHref={offer.detailsHref}
+              consultationLabel={t("consultationCta")}
+              detailsLabel={t("detailsCta")}
             />
           ))}
         </div>

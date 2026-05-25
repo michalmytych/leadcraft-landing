@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Logo from "@/components/Logo";
+import {useLocale, useTranslations} from "next-intl";
 import {
   LinkedinIcon,
   InstagramIcon,
@@ -9,20 +10,23 @@ import {
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
 
 const mainLinks = [
-  { label: "O nas", href: "#about" },
-  { label: "Oferta", href: "#offer" },
-  { label: "Klienci", href: "#clients" },
-  { label: "Blog", href: "#blog" },
+  { key: "about", href: "#about" },
+  { key: "offer", href: "#offer" },
+  { key: "clients", href: "#clients" },
+  { key: "blog", href: "#blog" },
 ];
 
 const serviceLinks = [
-  { label: "Eventy", href: "#events" },
-  { label: "Lead generation", href: "#lead-generation" },
-  { label: "Strony internetowe", href: "#websites" },
-  { label: "SEO", href: "#seo" },
+  { key: "events", href: "#events" },
+  { key: "leadGeneration", href: "#lead-generation" },
+  { key: "websites", href: "#websites" },
+  { key: "seo", href: "#seo" },
 ];
 
 export default function Footer() {
+  const locale = useLocale();
+  const t = useTranslations("Footer");
+
   return (
     <footer className="relative overflow-hidden bg-black text-white">
       <div className="pointer-events-none absolute inset-0 opacity-80">
@@ -36,30 +40,29 @@ export default function Footer() {
           <div className="grid gap-14 lg:grid-cols-[minmax(280px,420px)_1fr]">
             <div className="flex flex-col justify-between">
               <div className="mb-12">
-                <Link href="/" className="inline-block">
+                <Link href={`/${locale}`} className="inline-block">
                   <Logo variant="white" className="block h-10 w-auto md:h-12" />
                 </Link>
 
                 <p className="mt-7 font-content text-sm font-light text-white/92">
-                  Copyright © 2025 All Rights Reserved
+                  {t("copyright")}
                 </p>
 
                 <p className="mt-7 max-w-[560px] font-content text-sm leading-[1.35] text-white/78">
-                  Wszelkie prawa do treści strony są zastrzeżone, jakiekolwiek
-                  wykorzystanie treści w całości lub części jest zabronione.
+                  {t("legal")}
                 </p>
               </div>
 
               <div className="grid gap-12 grid-cols-2 md:grid-cols-2 sm:grid-cols-2 xs:mt-12 sm:mt-12 md:mt-12 lg:mt-8 lg:bg-transparent">
                 <nav className="flex flex-col gap-7">
                   {mainLinks.map((item, index) => (
-                    <div className="flex items-center gap-2" key={`${item.label}-${index}`}>
+                    <div className="flex items-center gap-2" key={`${item.key}-${index}`}>
                       <div className="w-2 h-2 rounded-full mb-0.5 bg-[#4F5CF9]"></div>
                       <Link
                         href={item.href}
                         className="font-heading text-lg leading-none text-white/80 transition hover:text-white hover:underline"
                       >
-                        {item.label}
+                        {t(`mainLinks.${item.key}`)}
                       </Link>
                     </div>
                   ))}
@@ -67,13 +70,13 @@ export default function Footer() {
 
                 <nav className="flex flex-col gap-7">
                   {serviceLinks.map((item, index) => (
-                    <div className="flex items-center gap-2" key={`${item.label}-${index}`}>
+                    <div className="flex items-center gap-2" key={`${item.key}-${index}`}>
                       <div className="w-2 h-2 rounded-full mb-0.5 bg-[#4F5CF9]"></div>
                       <Link
                         href={item.href}
                         className="font-heading text-lg leading-none text-white/80 transition hover:text-white hover:underline"
                       >
-                        {item.label}
+                        {t(`serviceLinks.${item.key}`)}
                       </Link>
                     </div>
                   ))}
@@ -87,7 +90,7 @@ export default function Footer() {
           <div className="flex flex-col justify-between gap-8 xl:items-end xl:text-right">
             <div>
               <h2 className="font-heading leading-none text-white/95 text-3xl">
-                Nawiążmy kontakt
+                {t("contactHeading")}
               </h2>
               <div className="h-0.5 w-full bg-linear-to-r from-white/0 to-white/70 mt-3"></div>
               <div className="mt-10 flex flex-col gap-2">
@@ -141,12 +144,12 @@ export default function Footer() {
             <div className="text-right">
               <div className="mt-32 flex items-center gap-6 justify-end">
                 <p className="font-content text-sm text-white/78">
-                  Created by Michał Mytych
+                  {t("createdBy")}
                 </p>
 
                 <a
                   href="https://www.linkedin.com/in/michalmytych/"
-                  aria-label="LinkedIn Michała"
+                  aria-label={t("creatorLinkedinLabel")}
                   className="text-white transition hover:opacity-75"
                 >
                   <LinkedinIcon className="h-10 w-10" />
@@ -154,7 +157,7 @@ export default function Footer() {
 
                 <a
                   href="https://github.com/michalmytych"
-                  aria-label="GitHub Michała"
+                  aria-label={t("creatorGithubLabel")}
                   className="text-white transition hover:opacity-75"
                 >
                   <GithubIcon className="h-8 w-8 pb-0.5" />

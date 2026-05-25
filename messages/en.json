@@ -1,6 +1,132 @@
 {
+  "Navigation": {
+    "items": {
+      "about": "About us",
+      "offer": "Offer",
+      "clients": "Clients",
+      "blog": "Blog"
+    },
+    "cta": "Free quote",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
   "Home": {
     "title": "Leadcraft",
-    "subtitle": "Marketing agency"
+    "subtitle": "Marketing agency",
+    "hero": {
+      "eyebrow": "B2B MARKETING",
+      "tags": [
+        "Lead Generation",
+        "Events",
+        "Websites",
+        "SEO"
+      ],
+      "heading": {
+        "line1": "We create marketing",
+        "line2Prefix": "that",
+        "highlight": "sells"
+      },
+      "description": "We help service, technical and manufacturing companies acquire clients through effective campaigns and thoughtful processes. We work flexibly - every strategy is tailored to your business.",
+      "cta": "Book a consultation"
+    },
+    "offer": {
+      "eyebrow": "Offer",
+      "heading": "How we can help your company",
+      "description": "We support service and technology companies in acquiring clients through effective marketing campaigns and a thoughtful sales process.",
+      "consultationCta": "Book a consultation",
+      "detailsCta": "Learn more",
+      "items": {
+        "leadGeneration": {
+          "title": "Lead Generation",
+          "subtitle": "Acquire high-value leads and turn them into real sales opportunities.",
+          "description": "We design B2B campaigns focused on outcomes: from strategy and messaging, through landing pages and forms, to contact qualification.",
+          "imageAlt": "Lead generation illustration"
+        },
+        "events": {
+          "title": "Events",
+          "subtitle": "We organize events and trade fairs that build relationships and support sales.",
+          "description": "We help prepare your brand presence at trade fairs, conferences and industry events.",
+          "imageAlt": "Events illustration"
+        },
+        "websites": {
+          "title": "Websites",
+          "subtitle": "We build company websites that increase conversion and clarify your offer.",
+          "description": "We create B2B websites and landing pages optimized for marketing and sales.",
+          "imageAlt": "Websites illustration"
+        },
+        "seo": {
+          "title": "SEO",
+          "subtitle": "We increase search visibility and help you reach the right clients.",
+          "description": "We work on technical SEO, content and site structure to increase traffic and the number of inquiries.",
+          "imageAlt": "SEO illustration"
+        }
+      }
+    },
+    "customers": {
+      "eyebrow": "Clients",
+      "heading": "Who do we support?",
+      "items": {
+        "b2bServices": {
+          "title": "B2B service companies",
+          "imageAlt": "B2B service companies"
+        },
+        "technical": {
+          "title": "Technical and engineering companies",
+          "imageAlt": "Technical and engineering companies"
+        },
+        "industrial": {
+          "title": "Industrial and manufacturing sector",
+          "imageAlt": "Industrial and manufacturing sector"
+        },
+        "consulting": {
+          "title": "Consulting and expert companies",
+          "imageAlt": "Consulting and expert companies"
+        },
+        "it": {
+          "title": "IT companies",
+          "imageAlt": "IT companies"
+        },
+        "logistics": {
+          "title": "Logistics and installation companies",
+          "imageAlt": "Logistics and installation companies"
+        },
+        "trade": {
+          "title": "Importers and exporters",
+          "imageAlt": "Importers and exporters"
+        },
+        "salesTeams": {
+          "title": "Sales teams",
+          "imageAlt": "Sales teams"
+        }
+      }
+    }
+  },
+  "LeadGeneration": {
+    "eyebrow": "Sales lead generation",
+    "heading": "Lead generation",
+    "introHeading": "What does it mean to us?",
+    "steps": {
+      "prospecting": "Prospecting and ICP"
+    }
+  },
+  "Footer": {
+    "copyright": "Copyright © 2025 All Rights Reserved",
+    "legal": "All rights to the website content are reserved. Any use of the content, in whole or in part, is prohibited.",
+    "mainLinks": {
+      "about": "About us",
+      "offer": "Offer",
+      "clients": "Clients",
+      "blog": "Blog"
+    },
+    "serviceLinks": {
+      "events": "Events",
+      "leadGeneration": "Lead generation",
+      "websites": "Websites",
+      "seo": "SEO"
+    },
+    "contactHeading": "Let's get in touch",
+    "createdBy": "Created by Michał Mytych",
+    "creatorLinkedinLabel": "Michał's LinkedIn",
+    "creatorGithubLabel": "Michał's GitHub"
   }
 }
